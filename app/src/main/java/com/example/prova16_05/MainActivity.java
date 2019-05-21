@@ -26,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         DAL dal = new DAL(this);
         Cursor cursor = dal.loadAll();
-        String[] fields = new String[] {CreateDatabase.ID, CreateDatabase.NOME};
-        int[] ids = {R.id.tvNome, R.id.tvIdade};
-
+        String[] fields = new String[] {CreateDatabase.NOME, CreateDatabase.IDADE, CreateDatabase.MORTALIDADE, CreateDatabase.ID};
+        int[] ids = {R.id.tvNome, R.id.tvIdade, R.id.tvMortalidade};
+        adapter = new SimpleCursorAdapter(MainActivity.this,
+                R.layout.layout_lista, cursor, fields, ids, 0);
 
         lvLista.setAdapter(adapter);
 
