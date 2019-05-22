@@ -176,35 +176,38 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="Potuação: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Cadastro" />
+
     <TextView
-        android:text="TextView"
+        android:id="@+id/Pontuacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Pontuacao" app:layout_constraintStart_toEndOf="@+id/textView14"
-        android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/textView14"/>
+        android:layout_marginStart="8dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
         android:text="Mortalidade: "
         app:layout_constraintBaseline_toBaselineOf="@+id/Pontuacao"
-        app:layout_constraintStart_toEndOf="@+id/Pontuacao" />
+        app:layout_constraintEnd_toStartOf="@+id/Mortalidade" />
 
     <TextView
         android:id="@+id/Mortalidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="TextView"
+        android:layout_marginEnd="32dp"
+        android:text="0%"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
-        app:layout_constraintStart_toEndOf="@+id/textView16" />
+        app:layout_constraintEnd_toEndOf="parent" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
